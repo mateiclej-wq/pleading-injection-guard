@@ -12,7 +12,7 @@ actually drawn visibly on the page, and blocks the file if it was not.
 ## Install
 
 ```bash
-git clone <this repo> ~/.claude/skills/pleading-injection-guard
+git clone https://github.com/mateiclej-wq/pleading-injection-guard ~/.claude/skills/pleading-injection-guard
 pip install pymupdf lxml numpy
 brew install tesseract tesseract-lang     # or your platform's package
 # optional, for .doc/.odt/.pages/.xls/.ppt:  brew install --cask libreoffice
