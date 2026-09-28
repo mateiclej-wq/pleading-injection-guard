@@ -1,0 +1,32 @@
+docx_strict_namespace_vanish.docx	HOSTILE	CLEAN	Strict OOXML w:vanish payload; scanner finds no Strict w:t at all
+docx_fragmented_hidden_runs.docx	HOSTILE	CLEAN	payload split into unique off-page baseline-shift buckets below per-segment thresholds
+docx_offpage_framepr.docx	HOSTILE	CLEAN+emit-leak	paragraph frame anchored at x/y 20000 twips; framePr geometry ignored
+docx_offpage_table_tblppr.docx	HOSTILE	CLEAN+emit-leak	floating table anchored at x/y 20000 twips; tblpPr geometry ignored
+docx_hidden_numbering_label.docx	HOSTILE	CLEAN	hidden numbering-level label is stored in numbering.xml w:lvlText and never scanned
+docx_customxml_evasive_payload.docx	HOSTILE	CLEAN	concealed prose in customXml is read but exempted from hidden bulk scoring
+docx_embedded_unscanned_object.docx	HOSTILE or UNSCANNED	CLEAN (child UNSCANNED ignored)	unsupported embedded object contains marker but parent exits 0
+docx_ordinary_skeleton_footnote_footer.docx	CLEAN	CLEAN	ordinary skeleton with citation, true footnote and grey 8pt footer control
+docx_ordinary_tracked_table_textbox.docx	CLEAN	CLEAN	ordinary tracked deletion, shaded table and visible VML textbox control
+html_svg_hidden_payload.html	HOSTILE	CLEAN	exact marker inside display:none SVG; SVG subtree is skipped
+html_hidden_input_payload.html	HOSTILE	CLEAN	exact marker in hidden input value; form-control values are not inspected
+html_css_important_override.html	HOSTILE	CLEAN+emit-leak	stylesheet display:none !important is overwritten by inline display:block in mini-engine
+html_filter_opacity.html	HOSTILE	CLEAN+emit-leak	standard filter:opacity(0) ignored
+html_closed_details.html	HOSTILE	CLEAN+emit-leak	closed details content treated as visible and released
+html_beyond_sniff_window.html	HOSTILE	CLEAN+emit-leak	HTML starts after 4096-byte sniff window and is scanned as plain text
+html_deep_tree_hidden_payload.html	HOSTILE	CLEAN	libxml2 depth fatal is ignored and recovered empty tree is accepted as scanned
+eml_multipart_epilogue_payload.eml	HOSTILE	CLEAN	marker in MIME epilogue is parsed by email library but scanner ignores epilogue
+eml_x_uuencode_attachment.eml	HOSTILE	REVIEW	x-uuencode attachment is decoded but child text loses concealed attachment context
+eml_false_positive_not_selector.eml	CLEAN	HOSTILE	FALSE POSITIVE: :not(.expanded) stripped, visible quoted thread classified concealed
+eml_ordinary_signature_quoted_thread.eml	CLEAN	CLEAN	ordinary signature and multipart quoted-thread control
+pdf_repeated_hidden_template.pdf	HOSTILE	CLEAN	identical concealed prose on three pages downgraded from critical to low
+pdf_ink_proxy_black_bars.pdf	HOSTILE	CLEAN+emit-leak	black text on exact black word boxes fools ring-based ink proxy and OCR is downgraded low
+pdf_hidden_telegraphic_no_function_words.pdf	HOSTILE	REVIEW	concealed telegraphic machine-aide instruction fails function-word prose gate
+pdf_javascript_payload_unread.pdf	HOSTILE	REVIEW	exact marker in JavaScript action is not content-scanned; only active-content medium
+pdf_hex_encoded_metadata_payload.pdf	HOSTILE	CLEAN	exact marker hex-encoded in PDF keywords; metadata skips bulk scoring and hex is not decoded
+pdf_max_pages_skips_payload.pdf	HOSTILE	HOSTILE default; REVIEW with --max-pages 1	second-page exact marker is wholly skipped under max-pages and only medium unverified-render remains
+pdf_ordinary_court_form_white_label.pdf	CLEAN	CLEAN	ordinary white-on-dark field label and read-only form field control
+pdf_ordinary_scanned_judgment_ocr.pdf	CLEAN	CLEAN	ordinary scanned judgment with matching invisible OCR layer control
+zip_nested_beyond_depth_payload.zip	HOSTILE	REVIEW	exact marker beyond nesting depth six is not scanned; medium parent finding only
+outside_received.pdf	HOSTILE	HOSTILE	direct-scan positive control for both hook bypass cases
+hook_watch/Opponent/Internal/received.pdf	BLOCK/HOSTILE	ALLOW (direct scanner HOSTILE)	hook skips an opponent-supplied Internal path by substring
+hook_watch/external-link.pdf	BLOCK/HOSTILE	ALLOW (resolved target direct scanner HOSTILE)	hook realpath escapes watched root through a symlink

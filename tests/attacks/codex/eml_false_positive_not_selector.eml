@@ -1,0 +1,14 @@
+From: solicitor@example.test
+To: counsel@example.test
+Date: Sat, 26 Sep 2026 12:00:00 +0100
+Subject: Re: Agreed directions
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<!doctype html><html><head><style>
+.quoted:not(.expanded) { display:none; }
+</style></head><body>
+<p>Dear Counsel, please find the agreed draft directions attached.</p>
+<div class="quoted expanded">On Friday the court confirmed that the hearing would remain listed and that both parties should file their bundles in accordance with the sealed order.</div>
+<p>Kind regards,<br>Solicitor<br>Example LLP</p>
+</body></html>

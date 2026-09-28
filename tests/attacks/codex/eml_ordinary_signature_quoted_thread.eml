@@ -1,0 +1,27 @@
+From: solicitor@example.test
+To: counsel@example.test
+Date: Sat, 26 Sep 2026 13:00:00 +0100
+Subject: Sealed order
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="ordinary-alt"
+
+--ordinary-alt
+Content-Type: text/plain; charset=utf-8
+
+Dear Counsel,
+
+Please find the sealed order attached.
+
+Kind regards,
+Solicitor
+Example LLP
+
+On 25 September 2026, Counsel wrote: The bundle index is agreed.
+--ordinary-alt
+Content-Type: text/html; charset=utf-8
+
+<html><body><p>Dear Counsel,</p><p>Please find the sealed order attached.</p>
+<p>Kind regards,<br>Solicitor<br>Example LLP</p>
+<blockquote>On 25 September 2026, Counsel wrote: The bundle index is agreed.</blockquote>
+</body></html>
+--ordinary-alt--

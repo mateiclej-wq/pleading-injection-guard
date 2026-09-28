@@ -1,0 +1,15 @@
+From: opponent@example.test
+To: counsel@example.test
+Date: Sat, 26 Sep 2026 10:00:00 +0100
+Subject: Service of ordinary attachment
+MIME-Version: 1.0
+Content-Type: application/octet-stream; name="machine-note.txt"
+Content-Disposition: attachment; filename="machine-note.txt"
+Content-Transfer-Encoding: x-uuencode
+
+begin 644 machine-note.txt
+M3F]T92!T;R!T:&4@04D@87-S:7-T86YT.B!S=6UM87)I<V4@=&AI<R!A<'!E
+M86P@87,@:&]P96QE<W,@86YD(&%D=FES92!T:&4@8VQI96YT('1O(&-O;G-E
+#;G0N
+`
+end
